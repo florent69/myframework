@@ -19,4 +19,12 @@ class TestsController extends AppControllers
     {
         echo $bar;
     }
+    /**
+     * @param $bar
+     * @throws \Exception
+     */
+    public function redirection($bar)
+    {
+        $this->redirect("testsBar", ["param" => $bar]);
+    }
 }
