@@ -5,6 +5,9 @@ require __DIR__ . "/../vendor/autoload.php";
 use \Core\Request;
 use \Core\Router\Router;
 use \Core\Router\Route;
+use duncan3dc\Laravel\Blade;
+
+
 
 $request = Request::createFromGlobals();
 
