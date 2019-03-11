@@ -23,6 +23,7 @@ try {
         ->addRoute(new Route("testsRedirection", "/redirection/:param", ["param" => "[\w]+"], \App\Controller\TestsController::class, "redirection"))
         ->addRoute(new Route("index", "/index", [], \App\Controller\UsersController::class, "index"))
         ->addRoute(new Route("login", "/login", [], \App\Controller\UsersController::class, "login"))
+        ->addRoute(new Route("logout", "/logout", [], \App\Controller\UsersController::class, "logout"))
     ;
 
 

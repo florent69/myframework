@@ -29,6 +29,6 @@ class AuthComponent
      */
     static function delete()
     {
-        unset($_SESSION["isConnected"]);
+        session_destroy();
     }
 }
