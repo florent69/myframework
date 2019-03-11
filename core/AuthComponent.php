@@ -22,6 +22,7 @@ class AuthComponent
     static function create()
     {
         $_SESSION["isConnected"] = true;
+        setcookie ( "PHPSESSID", $_COOKIE['PHPSESSID'], time()+60);
     }
 
     /**

@@ -23,7 +23,6 @@ class UsersController extends AppControllers
 //        $_SESSION['isConnected'] = true;     // Création de la session pour vérification d'affichage index.
         AuthComponent::checkAuthenticated();
         if (isset($_SESSION['isConnected'])) { // Si la session existe (= isset)
-
             return $this->render("index");
         } else {
             return $this->redirect("login");
@@ -32,11 +31,14 @@ class UsersController extends AppControllers
 
     public function login()
     {
+//        echo session_save_path();   // Cette méthode permet d'afficher le chemin où les sessions sont sauvées
+
         $mail = "le-campus-numerique@in-the-alps.fr";
         $password = "123";
         if (!empty($_POST)) {
             if ($_POST["email"] === $mail && $_POST["password"] === $password) {
                 AuthComponent::create();
+
                 $this->redirect("index");
             }
         }else {
