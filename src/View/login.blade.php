@@ -9,7 +9,7 @@
 </head>
 <body>
 <div>
-    <form action="" method="post" >
+    <form action="login" method="post" >
         <label>email</label>
         <input type="email" name="email" id="email" cols="30" rows="10">
         <label>password</label>

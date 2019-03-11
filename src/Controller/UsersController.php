@@ -31,9 +31,12 @@ class UsersController extends AppControllers
 
     public function login()
     {
-//        if(isset() {
-//            $_SESSION['isConnected'] = true;
-//        }
+        $mail= "le-campus-numerique@in-the-alps.fr";
+        $password= "123";
+
+        if ($_POST["email"] === $mail && $_POST["password"] === $password){
+            $this->redirect("index");
+        }
     }
 
     public function logout()

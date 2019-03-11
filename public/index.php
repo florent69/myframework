@@ -22,7 +22,7 @@ try {
         ->addRoute(new Route("testsBar", "/tests/bar/:param", ["param" => "[\w]+"], \App\Controller\TestsController::class, "bar"))
         ->addRoute(new Route("testsRedirection", "/redirection/:param", ["param" => "[\w]+"], \App\Controller\TestsController::class, "redirection"))
         ->addRoute(new Route("index", "/index", [], \App\Controller\UsersController::class, "index"))
-        ->addRoute(new Route("login", "/login", [], \App\Controller\TestsController::class, "login"))
+        ->addRoute(new Route("login", "/login", [], \App\Controller\UsersController::class, "login"))
     ;
 
 

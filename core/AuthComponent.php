@@ -24,8 +24,11 @@ class AuthComponent
         $_SESSION["isConnected"] = true;
     }
 
+    /**
+     *
+     */
     static function delete()
     {
-
+        unset($_SESSION["isConnected"]);
     }
 }
