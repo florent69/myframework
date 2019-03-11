@@ -5,6 +5,7 @@
  * Date: 06/03/2019
  * Time: 16:28
  */
+
 namespace Core;
 
 use Core\Router\Router;
@@ -24,11 +25,12 @@ abstract class Controller
      * @var Blade
      */
     private $blade;
+
     /**
      * Controller constructor.
      *
      * @param Request $request
-     * @param Router  $router
+     * @param Router $router
      */
     public function __construct(Request $request, Router $router)
     {
@@ -36,6 +38,7 @@ abstract class Controller
         $this->router = $router;
         $this->blade = new BladeInstance($_SERVER['DOCUMENT_ROOT'] . '/../src/View/', $_SERVER['DOCUMENT_ROOT'] . '/../tmp/cache/views/');
     }
+
     /**
      * @param       $routeName
      * @param array $args
@@ -47,6 +50,7 @@ abstract class Controller
         $route = $this->router->getRoute($routeName);
         header(sprintf("Location: %s", $route->generateUrl($args)));
     }
+
     /**
      * @param string $filename
      * @param array $data

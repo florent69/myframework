@@ -20,7 +20,11 @@ try {
 
         ->addRoute(new Route("testsFoo", "/tests/foo", [], \App\Controller\TestsController::class, "foo"))
         ->addRoute(new Route("testsBar", "/tests/bar/:param", ["param" => "[\w]+"], \App\Controller\TestsController::class, "bar"))
-        ->addRoute(new Route("testsRedirection", "/redirection/:param", ["param" => "[\w]+"], \App\Controller\TestsController::class, "redirection"));
+        ->addRoute(new Route("testsRedirection", "/redirection/:param", ["param" => "[\w]+"], \App\Controller\TestsController::class, "redirection"))
+        ->addRoute(new Route("index", "/index", [], \App\Controller\UsersController::class, "index"))
+        ->addRoute(new Route("login", "/login", [], \App\Controller\TestsController::class, "login"))
+    ;
+
 
     $route = $router->getRouteByRequest();
     $route->call($request, $router);

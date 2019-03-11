@@ -35,4 +35,8 @@ class TestsController extends AppControllers
     {
         $this->redirect("testsBar", ["param" => $bar]);
     }
+    public function login()
+    {
+        return $this->render("login");
+    }
 }
